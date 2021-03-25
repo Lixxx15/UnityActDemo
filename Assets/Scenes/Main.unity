@@ -713,7 +713,7 @@ MonoBehaviour:
   _Animator: {fileID: 653209590}
   _Events:
   - _OpenPoint: 0
-    _ClosePoint: 0.7
+    _ClosePoint: 0.5
     _IsOpen: 0
     _PlayEvent:
       m_PersistentCalls:
@@ -1106,7 +1106,7 @@ MonoBehaviour:
   _Animator: {fileID: 653209590}
   _Events:
   - _OpenPoint: 0
-    _ClosePoint: 0.7
+    _ClosePoint: 0.5
     _IsOpen: 0
     _PlayEvent:
       m_PersistentCalls:
@@ -1497,7 +1497,7 @@ MonoBehaviour:
   _Animator: {fileID: 653209590}
   _Events:
   - _OpenPoint: 0
-    _ClosePoint: 0.7
+    _ClosePoint: 0.5
     _IsOpen: 0
     _PlayEvent:
       m_PersistentCalls:
@@ -1720,7 +1720,7 @@ MonoBehaviour:
   _Animator: {fileID: 653209590}
   _Events:
   - _OpenPoint: 0
-    _ClosePoint: 0.7
+    _ClosePoint: 0.6
     _IsOpen: 0
     _PlayEvent:
       m_PersistentCalls:
@@ -2664,9 +2664,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _NowState: 0
-  onBlow:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &784727539
 GameObject:
   m_ObjectHideFlags: 0
@@ -8336,7 +8333,7 @@ MonoBehaviour:
   _Animator: {fileID: 653209590}
   _Events:
   - _OpenPoint: 0
-    _ClosePoint: 0.7
+    _ClosePoint: 0.6
     _IsOpen: 0
     _PlayEvent:
       m_PersistentCalls:
@@ -9583,7 +9580,7 @@ MonoBehaviour:
   _Animator: {fileID: 653209590}
   _Events:
   - _OpenPoint: 0
-    _ClosePoint: 0.7
+    _ClosePoint: 0.6
     _IsOpen: 0
     _PlayEvent:
       m_PersistentCalls:
@@ -9856,7 +9853,7 @@ MonoBehaviour:
   _Animator: {fileID: 653209590}
   _Events:
   - _OpenPoint: 0
-    _ClosePoint: 0.7
+    _ClosePoint: 0.5
     _IsOpen: 0
     _PlayEvent:
       m_PersistentCalls:
@@ -10410,6 +10407,42 @@ MonoBehaviour:
           m_TargetAssemblyTypeName: Player.Weapon, Assembly-CSharp
           m_MethodName: SetState
           m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1524674084}
+          m_TargetAssemblyTypeName: Player.Counter, Assembly-CSharp
+          m_MethodName: Unlock
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 661943941}
+          m_TargetAssemblyTypeName: Player.Counter, Assembly-CSharp
+          m_MethodName: Unlock
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 337398227}
+          m_TargetAssemblyTypeName: Player.Counter, Assembly-CSharp
+          m_MethodName: Unlock
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
