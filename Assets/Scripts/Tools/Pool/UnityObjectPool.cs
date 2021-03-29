@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace LX
+namespace Tools
 {
     public class UnityObjectPool:Tools.MonoSingleton<UnityObjectPool>
     {

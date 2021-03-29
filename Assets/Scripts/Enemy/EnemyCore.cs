@@ -13,6 +13,7 @@ namespace Enemy
         public ParticleSystem _HitP;
         public Transform _Front;
         public RoleStateModel _SModel;
+        public LX.MoveModule _Move;
         private Rigidbody _R;
 
         private void Start()
@@ -48,12 +49,30 @@ namespace Enemy
                 }
 
             }
+            if (other.gameObject.tag == "Home")
+            {
+                UI.UIManager.Instance.HomeHit();
+                _Move.Stop();
+                Tools.UnityObjectPool.Instance.RecycleGo("Enemy", gameObject);
+            }
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.tag == "Wall")
+            {
+                _Move.Stop();
+                Tools.UnityObjectPool.Instance.RecycleGo("Enemy", gameObject);
+                UI.UIManager.Instance._BaDaoBtn.StopFlicker();
+                UI.UIManager.Instance.Kill();
+            }
         }
         private void OnTriggerExit(Collider other)
         {
             if (other.gameObject.tag == "Player")
             {
                 ObjectShake(Duration, Strength);
+                UI.UIManager.Instance._HitCount.Hit();
             }
         }
 
@@ -72,7 +91,7 @@ namespace Enemy
         {
             isShake = true;
             Vector3 startPosition = transform.position;
-
+            _Move.Pause();
             while (duration > 0)
             {
                 transform.position = UnityEngine.Random.insideUnitSphere * strength + startPosition;
@@ -81,6 +100,7 @@ namespace Enemy
             }
             transform.position = startPosition;
             isShake = false;
+            _Move.Continue();
         }
         #endregion
     }

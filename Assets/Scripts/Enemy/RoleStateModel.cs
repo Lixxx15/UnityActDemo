@@ -21,7 +21,7 @@ namespace Enemy
         /// <param name="duration">状态持续时间</param>
         public void Blow(Vector3 dir, float duration)
         {
-            _R.AddForce(dir * 500);
+            _R.AddForce(dir * 300);
             UI.UIManager.Instance._BaDaoBtn.Flicker();
             _NowState = RoleState.Blow;
             StartCoroutine(StateDuration(duration));

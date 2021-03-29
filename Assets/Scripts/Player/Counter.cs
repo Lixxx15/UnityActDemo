@@ -17,6 +17,11 @@ namespace Player
         public int _NowTime;
         public List<UnityEvent> _Actions;
 
+        public void ResetNow()
+        {
+            _Now = 0;
+        }
+
         public void Add()
         {
             if (_CounterLock)
